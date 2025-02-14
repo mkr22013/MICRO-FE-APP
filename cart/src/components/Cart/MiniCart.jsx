@@ -24,12 +24,6 @@ export default function MiniCart() {
 
   if (!items) return null;
 
-  const CallClearCart = async () => {
-    console.log("Making call to clear the cart");
-    await clearCart();
-    setShowCart(!showCart);
-  };
-
   return (
     <>
       <span onClick={() => setShowCart(!showCart)} id="showcart_span">
@@ -44,9 +38,17 @@ export default function MiniCart() {
           style={{
             width: 300,
             top: "2rem",
-            //left: -250,
+            left: -250,
           }}
         >
+          <div className="grid gap-3 text-sm mb-5">
+            <span onClick={() => setShowCart(!showCart)} id="showcart_span">
+              <i
+                className="ri-close-circle-fill text-2xl float-end"
+                id="showcart"
+              ></i>
+            </span>
+          </div>
           <div
             className="grid gap-3 text-sm"
             style={{
@@ -77,7 +79,7 @@ export default function MiniCart() {
               <button
                 id="clearcart"
                 className="bg-white border border-green-800 text-green-800 py-2 px-5 rounded-md text-sm"
-                onClick={() => CallClearCart()}
+                onClick={() => clearCart()}
               >
                 Clear Cart
               </button>
@@ -85,7 +87,7 @@ export default function MiniCart() {
             <div className="flex-end">
               <button
                 className="bg-green-900 text-white py-2 px-5 rounded-md text-sm"
-                onClick={() => CallClearCart()}
+                onClick={() => clearCart()}
               >
                 Checkout
               </button>

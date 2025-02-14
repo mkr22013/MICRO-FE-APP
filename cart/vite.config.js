@@ -15,7 +15,11 @@ export default defineConfig({
         pdp: "http://localhost:5173/assets/remoteEntry.js",
         cart: "http://localhost:5174/assets/remoteEntry.js",
       },
-      exposes: {},
+      exposes: {
+        "./cart": "./src/components/Cart/cart.js",
+        "./MiniCart": "./src/components/Cart/MiniCart.jsx",
+        "./Login": "./src/components/Login/Login.jsx",
+      },
       shared: ["react", "react-dom"],
     }),
   ],

@@ -11,6 +11,11 @@ export default defineConfig({
     federation({
       name: "home",
       filename: "remoteEntry.js",
+      remotes: {
+        home: "http://localhost:5001/assets/remoteEntry.js",
+        pdp: "http://localhost:5173/assets/remoteEntry.js",
+        cart: "http://localhost:5174/assets/remoteEntry.js",
+      },
       exposes: {
         "./Header": "./src/components/Header/Header.jsx",
         "./Footer": "./src/components/Footer/Footer.jsx",
