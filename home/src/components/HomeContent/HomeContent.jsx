@@ -15,7 +15,7 @@ function HomeContent() {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 gap-7 border-4 rounded-2xl bg-blue-50">
+    <div className="grid grid-cols-4 gap-7 border-4 rounded-2xl bg-amber-50">
       {products.map((product) => (
         <div key={product.id} className="m-5 ">
           <Link to={`/product/${product.id}`}>

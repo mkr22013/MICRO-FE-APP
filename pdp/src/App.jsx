@@ -11,11 +11,11 @@ import "remixicon/fonts/remixicon.css";
 
 function App() {
   return (
-    <div className="text-3xl mx-auto" style={{ width: "100vh" }}>
+    <div className="mx-auto" style={{ width: "100vh" }}>
       <Suspense fallback={<div>Loading...</div>}>
         <Header />
       </Suspense>
-      <div className="my-10">
+      <div className="my-2">
         <Routes>
           <Route
             strict

@@ -6,9 +6,9 @@ import "remixicon/fonts/remixicon.css";
 
 function App() {
   return (
-    <div className="text-3xl mx-auto" style={{ width: "100vh" }}>
+    <div className="text-sm mx-auto" style={{ width: "100vh" }}>
       <Header />
-      <div className="my-10">
+      <div className="my-2">
         <HomeContent />
       </div>
       <Footer />

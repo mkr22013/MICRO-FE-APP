@@ -15,11 +15,11 @@ function PDPContent() {
   if (!product) return null;
 
   return (
-    <div className="grid grid-cols-2 gap-5">
-      <div>
+    <div className="border-4 rounded-2xl bg-amber-50 grid grid-cols-2 gap-5">
+      <div className="m-5">
         <img src={product.image} alt={product.name} />
       </div>
-      <div>
+      <div className="m-5">
         <div className="flex">
           <h1 className="font-bold text-3xl flex-grow">{product.name}</h1>
           <div className="font-bold text-3xl flex-end">
