@@ -2,6 +2,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
 import HomeContent from "./components/HomeContent/HomeContent";
+import "remixicon/fonts/remixicon.css";
 
 function App() {
   return (

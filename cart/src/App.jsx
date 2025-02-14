@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "../../home/src/components/Header/Header";
 import Footer from "../../home/src/components/Footer/Footer";
 import CartContent from "./components/Cart/CartContent";
-
+import "remixicon/fonts/remixicon.css";
 function App() {
   const [count, setCount] = useState(0);
 

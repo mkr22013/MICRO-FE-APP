@@ -7,6 +7,7 @@ const Footer = React.lazy(() =>
 );
 import PDPContent from "./components/PDPContent/PDPContent";
 import { Route, Routes } from "react-router-dom";
+import "remixicon/fonts/remixicon.css";
 
 function App() {
   return (
