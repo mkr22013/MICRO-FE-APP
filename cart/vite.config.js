@@ -9,13 +9,13 @@ export default defineConfig({
     tailwindcss(),
     react(),
     federation({
-      name: "home",
-      filename: "remoteEntry.js",
-      exposes: {
-        "./Header": "./src/components/Header/Header.jsx",
-        "./Footer": "./src/components/Footer/Footer.jsx",
-        "./Products": "././service/products.js",
+      name: "pdp",
+      remotes: {
+        home: "http://localhost:5001/assets/remoteEntry.js",
+        pdp: "http://localhost:5173/assets/remoteEntry.js",
+        cart: "http://localhost:5174/assets/remoteEntry.js",
       },
+      exposes: {},
       shared: ["react", "react-dom"],
     }),
   ],
