@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
     react(),
     federation({
-      name: "pdp",
+      name: "cart",
       remotes: {
         home: "http://localhost:5001/assets/remoteEntry.js",
         pdp: "http://localhost:5173/assets/remoteEntry.js",
