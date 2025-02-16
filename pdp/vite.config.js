@@ -16,8 +16,8 @@ export default defineConfig({
         cart: "http://localhost:5003/dist/assets/remoteEntry.js",
         addtocartbutton: "http://localhost:5175/dist/assets/remoteEntry.js",
       },
-      exposes: {},
-      shared: ["react", "react-dom"],
+      exposes: { "./PDPContent": "./src/components/PDPContent/PDPContent.jsx" },
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   build: {

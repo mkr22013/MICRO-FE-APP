@@ -1,11 +1,11 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 import { getProductById, currency } from "home/Products";
 import { useParams } from "react-router-dom";
 
 function PDPContent() {
   const [product, setProduct] = useState(null);
   const { id } = useParams();
-
+  console.log("I am in PDPContent component");
   useEffect(() => {
     if (id) {
       getProductById(id).then(setProduct);

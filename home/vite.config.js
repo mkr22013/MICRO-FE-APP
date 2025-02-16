@@ -20,8 +20,9 @@ export default defineConfig({
         "./Header": "./src/components/Header/Header.jsx",
         "./Footer": "./src/components/Footer/Footer.jsx",
         "./Products": "././service/products.js",
+        "./HomeContent": "./src/components/HomeContent/HomeContent.jsx",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   build: {

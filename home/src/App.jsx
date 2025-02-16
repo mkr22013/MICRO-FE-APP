@@ -1,5 +1,5 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Header from "home/Header";
+import Footer from "home/Footer";
 import "./App.css";
 import HomeContent from "./components/HomeContent/HomeContent";
 import "remixicon/fonts/remixicon.css";
