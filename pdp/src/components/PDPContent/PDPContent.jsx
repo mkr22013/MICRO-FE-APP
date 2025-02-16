@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { getProductById, currency } from "../../../../home/service/products";
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { getProductById, currency } from "home/Products";
 import { useParams } from "react-router-dom";
 
 function PDPContent() {

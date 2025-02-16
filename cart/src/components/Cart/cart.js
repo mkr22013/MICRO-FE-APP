@@ -25,7 +25,7 @@ export const login = (username, password) =>
     });
 
 export function useLoggedIn() {
-  const [loggedIn, setLoggedIn] = useState("");
+  const [loggedIn, setLoggedIn] = useState(!!jwt.value);
   useEffect(() => {
     setLoggedIn(!!jwt.value);
     return () =>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import { cart, clearCart } from "./cart";
-import { currency } from "../../../../home/service/products";
+import { cart, clearCart } from "cart/cart";
+import { currency } from "home/Products";
 
 export default function MiniCart() {
   const [items, setItems] = useState(undefined);

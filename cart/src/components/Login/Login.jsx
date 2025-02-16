@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { login, useLoggedIn } from "../Cart/cart";
+import { login, useLoggedIn } from "cart/cart";
 
 export default function Login() {
   const loggedIn = useLoggedIn();

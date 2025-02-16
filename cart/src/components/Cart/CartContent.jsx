@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import { cart, clearCart } from "./cart";
-import { currency } from "../../../../home/service/products";
+import { cart, clearCart } from "cart/cart";
+import { currency } from "home/Products";
 
 export default function CartContent() {
-  const [items, setItems] = useState(undefined);
+  const [items, setItems] = useState([]);
+  console.log("cart :", cart);
 
   useEffect(() => {
     setItems(cart.value?.cartItems);
@@ -14,6 +15,7 @@ export default function CartContent() {
       });
   }, [items]);
   if (!items) return null;
+  console.log("I am here means there are values");
   return (
     <div className="border-4 rounded-2xl bg-amber-50">
       <div className="m-10 grid grid-cols-4 gap-5">

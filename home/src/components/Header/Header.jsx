@@ -1,6 +1,6 @@
 import React from "react";
-import MiniCart from "../../../../cart/src/components/Cart/MiniCart";
-import Login from "../../../../cart/src/components/Login/Login";
+import MiniCart from "cart/MiniCart";
+import Login from "cart/Login";
 
 function Header() {
   return (
@@ -8,8 +8,8 @@ function Header() {
       <div className="flex">
         <div className="flex-grow text-center">Fidget Spinner Catalog</div>
         <div className="float-end relative">
-          <MiniCart />
           <Login />
+          <MiniCart />
         </div>
       </div>
     </div>

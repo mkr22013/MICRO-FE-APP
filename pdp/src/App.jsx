@@ -1,10 +1,6 @@
 import React, { Suspense } from "react";
-const Header = React.lazy(() =>
-  import("../../home/src/components/Header/Header")
-);
-const Footer = React.lazy(() =>
-  import("../../home/src/components/Footer/Footer")
-);
+const Header = React.lazy(() => import("home/Header"));
+const Footer = React.lazy(() => import("home/Footer"));
 import PDPContent from "./components/PDPContent/PDPContent";
 import { Route, Routes } from "react-router-dom";
 import "remixicon/fonts/remixicon.css";

@@ -12,9 +12,9 @@ export default defineConfig({
       name: "home",
       filename: "remoteEntry.js",
       remotes: {
-        home: "http://localhost:5001/assets/remoteEntry.js",
-        pdp: "http://localhost:5173/assets/remoteEntry.js",
-        cart: "http://localhost:5174/assets/remoteEntry.js",
+        home: "http://localhost:5001/dist/assets/remoteEntry.js",
+        pdp: "http://localhost:5173/dist/assets/remoteEntry.js",
+        cart: "http://localhost:5174/dist/assets/remoteEntry.js",
       },
       exposes: {
         "./Header": "./src/components/Header/Header.jsx",

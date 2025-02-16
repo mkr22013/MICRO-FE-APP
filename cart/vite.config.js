@@ -11,14 +11,15 @@ export default defineConfig({
     federation({
       name: "cart",
       remotes: {
-        home: "http://localhost:5001/assets/remoteEntry.js",
-        pdp: "http://localhost:5173/assets/remoteEntry.js",
-        cart: "http://localhost:5174/assets/remoteEntry.js",
+        home: "http://localhost:5001/dist/assets/remoteEntry.js",
+        pdp: "http://localhost:5173/dist/assets/remoteEntry.js",
+        cart: "http://localhost:5174/dist/assets/remoteEntry.js",
       },
       exposes: {
         "./cart": "./src/components/Cart/cart.js",
         "./MiniCart": "./src/components/Cart/MiniCart.jsx",
         "./Login": "./src/components/Login/Login.jsx",
+        "./CartContent": "./src/components/Cart/CartContent.jsx",
       },
       shared: ["react", "react-dom"],
     }),

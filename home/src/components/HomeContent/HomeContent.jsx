@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { getProducts, currency } from "../../../service/products";
-import {
-  addToCart,
-  useLoggedIn,
-} from "../../../../cart/src/components/Cart/cart";
+import { getProducts, currency } from "home/Products";
+//
+import { addToCart, useLoggedIn } from "cart/cart";
 import { Link } from "react-router-dom";
 
 function HomeContent() {
