@@ -21,7 +21,7 @@ export default defineConfig({
         "./Login": "./src/components/Login/Login.jsx",
         "./CartContent": "./src/components/Cart/CartContent.jsx",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-router-dom"],
     }),
   ],
   build: {
