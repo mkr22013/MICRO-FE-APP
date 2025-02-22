@@ -14,7 +14,7 @@ export default defineConfig({
         home: "http://localhost:5001/dist/assets/remoteEntry.js",
         pdp: "http://localhost:5002/dist/assets/remoteEntry.js",
         cart: "http://localhost:5003/dist/assets/remoteEntry.js",
-        addtocartbutton: "http://localhost:5175/dist/assets/remoteEntry.js",
+        addtocart: "http://localhost:5020/dist/assets/remoteEntry.js",
       },
       exposes: { "./PDPContent": "./src/components/PDPContent/PDPContent.jsx" },
       shared: ["react", "react-dom", "react-router-dom"],

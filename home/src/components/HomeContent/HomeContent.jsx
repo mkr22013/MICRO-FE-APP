@@ -3,6 +3,7 @@ import { getProducts, currency } from "home/Products";
 
 import { addToCart, useLoggedIn } from "cart/cart";
 import { Link } from "react-router-dom";
+import { AddToCart } from "addtocart/AddToCart";
 
 function HomeContent() {
   const [products, setProducts] = useState([]);
@@ -33,13 +34,15 @@ function HomeContent() {
           {loggedIn && (
             <div className="text-center mt-2">
               <div className="flex-end">
-                <button
+                {/* <button
                   id={`addtocart_${product.id}`}
                   className="bg-blue-500  hover:bg-blue-700 text-white py-2 px-5 rounded-md text-sm"
                   onClick={() => addToCart(product.id)}
                 >
                   Add to Cart
-                </button>
+                </button> */}
+
+                <add-to-cart id={product.id} />
               </div>
             </div>
           )}
