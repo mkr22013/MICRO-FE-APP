@@ -77,3 +77,18 @@ export const clearCart = () =>
       console.log("fetching cart data post delete");
       getCart();
     });
+
+export const removeCartItem = (id) =>
+  fetch(`${API_SERVER}/cart`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${jwt.value}`,
+    },
+    body: JSON.stringify({ id }),
+  })
+    .then((res) => res.json())
+    .then(() => {
+      console.log("Removing cart item");
+      getCart();
+    });

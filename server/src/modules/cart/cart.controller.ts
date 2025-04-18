@@ -6,6 +6,7 @@ import {
   Body,
   Request,
   UseGuards,
+  Put,
 } from '@nestjs/common';
 import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 import products, { Product } from 'src/entity/products';
@@ -53,6 +54,29 @@ export class CartController {
         ...products.find((product) => product.id === parseInt(id)),
         quantity: 1,
       });
+    }
+    return cart;
+  }
+
+  @Put()
+  @UseGuards(JwtAuthGuard)
+  async deleteItem(
+    @Request() req,
+    @Body() { id }: { id: string },
+  ): Promise<Cart> {
+    const cart = this.carts[req.user.userId];
+    const cartItem = cart.cartItems.find(
+      (cartItem) => cartItem.id === parseInt(id),
+    );
+    if (cartItem && cartItem.quantity > 1) {
+      cartItem.quantity -= 1;
+    } else {
+      var idx = cart.cartItems.indexOf(cartItem);
+      console.log('Index of item to be removed :', idx);
+      if (idx === 0) cart.cartItems.splice(idx, 1);
+      else {
+        cart.cartItems.splice(idx, 1);
+      }
     }
     return cart;
   }
