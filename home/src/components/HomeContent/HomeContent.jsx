@@ -16,19 +16,22 @@ function HomeContent() {
   return (
     <div className="grid grid-cols-4 gap-7 border-4 rounded-2xl bg-amber-50">
       {products.map((product) => (
-        <div key={product.id} className="m-5 ">
+        <div key={product.id} className="m-5">
           <Link to={`/product/${product.id}`}>
             <img
               className="rounded-2xl"
               src={product.image}
               alt={product.name}
+              style={{ width: "350px", height: "250px" }}
             />
           </Link>
           <div className="flex">
             <div className="flex-grow font-bold">
               <Link to={`/product/${product.id}`}>{product.name}</Link>
             </div>
-            <div className="flex-end">{currency.format(product.price)}</div>
+            <div className="flex-end font-bold">
+              {currency.format(product.price)}
+            </div>
           </div>
           <div className="text-sm mt-4">{product.description}</div>
           {loggedIn && (
