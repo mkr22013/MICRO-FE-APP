@@ -48,7 +48,8 @@ const products: Product[] = [
     id: 5,
     name: 'Blue Dagger Spinner',
     price: 5.99,
-    description: 'Blue authentic winged spinner.',
+    description:
+      'Blue authentic winged spinner is a new take on an fidget toy.',
     image: 'http://localhost:8080/fidget-5.jpg',
     longDescription:
       'The Blue colored authentic Spinner is a new take on an fidget toy. Made of durable polycarbonate',
