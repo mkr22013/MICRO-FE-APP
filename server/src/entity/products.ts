@@ -65,7 +65,7 @@ const products: Product[] = [
   },
   {
     id: 7,
-    name: 'Goldy-spinner',
+    name: 'Goldy-Spinner',
     price: 8.99,
     description: 'So golden, so spinny! Classic and beautiful.',
     image: 'http://localhost:8080/fidget-7.jpg',
@@ -74,7 +74,7 @@ const products: Product[] = [
   },
   {
     id: 8,
-    name: 'Golden pointers',
+    name: 'Golden Pointers',
     price: 7.99,
     description: 'Beautiful pointed golden spinner with jade highlights.',
     image: 'http://localhost:8080/fidget-8.jpg',
@@ -111,7 +111,7 @@ const products: Product[] = [
   },
   {
     id: 12,
-    name: 'Ancient quoted',
+    name: 'Ancient Quoted',
     price: 15.99,
     description:
       'Ancient quoted scripted fidget spinner. It is timeless. it is stunning.',
@@ -141,7 +141,7 @@ const products: Product[] = [
   },
   {
     id: 15,
-    name: 'Dimond gold widget',
+    name: 'Dimond Gold Widget',
     price: 10.99,
     description:
       'So beautiful gears and so golden. You will be endlessly fascinated by this spinner.',
