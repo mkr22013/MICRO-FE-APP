@@ -7,11 +7,11 @@ import "remixicon/fonts/remixicon.css";
 function App() {
   return (
     <div className="text-sm mx-auto" style={{ width: "100vh" }}>
-      <Header />
+      {/* <Header /> */}
       <div className="my-2">
         <HomeContent />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

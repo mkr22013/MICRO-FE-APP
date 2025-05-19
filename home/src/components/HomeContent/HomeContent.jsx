@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getProducts, currency } from "home/Products";
 
-import { addToCart, useLoggedIn } from "cart/cart";
+import { useLoggedIn } from "cart/cart";
 import { Link } from "react-router-dom";
-import { AddToCart } from "addtocart/AddToCart";
 
 function HomeContent() {
   const [products, setProducts] = useState([]);
@@ -14,7 +13,7 @@ function HomeContent() {
   }, []);
 
   return (
-    <div className="grid grid-cols-4 gap-7 border-4 rounded-2xl bg-amber-50">
+    <div className="grid grid-cols-4 gap-5 border-4 rounded-2xl bg-amber-50">
       {products.map((product) => (
         <div key={product.id} className="m-5">
           <Link to={`/product/${product.id}`}>
@@ -22,14 +21,14 @@ function HomeContent() {
               className="rounded-2xl"
               src={product.image}
               alt={product.name}
-              style={{ width: "350px", height: "250px" }}
+              style={{ width: "100%", height: "auto" }}
             />
           </Link>
           <div className="flex">
-            <div className="flex-grow font-bold">
+            <div className="flex-grow font-bold" style={{ width: "70%" }}>
               <Link to={`/product/${product.id}`}>{product.name}</Link>
             </div>
-            <div className="flex-end font-bold">
+            <div className="flex-grow" style={{ width: "30%" }}>
               {currency.format(product.price)}
             </div>
           </div>
